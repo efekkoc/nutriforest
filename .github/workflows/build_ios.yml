@@ -1,0 +1,47 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    name: Build iOS IPA for Sideloadly & AltStore
+    runs-on: macos-14
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Get Flutter Dependencies
+        run: flutter pub get
+
+      - name: Build iOS Application (Release)
+        run: |
+          flutter build ios --release --no-codesign
+
+      - name: Package as IPA
+        run: |
+          mkdir -p Payload
+          cp -r build/ios/iphoneos/Runner.app Payload/
+          zip -r NutriForest.ipa Payload
+          rm -rf Payload
+
+      - name: Upload NutriForest IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: NutriForest-iOS-IPA
+          path: NutriForest.ipa
+          retention-days: 14

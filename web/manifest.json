@@ -1,0 +1,51 @@
+{
+    "name": "NutriForest - AI Kalori Takibi",
+    "short_name": "NutriForest",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0B130E",
+    "theme_color": "#10B981",
+    "description": "Yapay zeka destekli akıllı kalori takibi ve 30 günlük orman adası",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Yemek Tara",
+            "short_name": "Tara",
+            "description": "Kamera ile yemek tara ve analiz et",
+            "url": "./?action=scan",
+            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Yazarak Ekle",
+            "short_name": "Yaz",
+            "description": "Yapay zekaya yazarak yemek ekle",
+            "url": "./?action=text",
+            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+        }
+    ],
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
