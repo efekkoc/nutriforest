@@ -1,6 +1,5 @@
-import Flutter
 import UIKit
 
-class SceneDelegate: FlutterSceneDelegate {
-
+// Kept as a dummy class to satisfy project.pbxproj file references
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
