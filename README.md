@@ -80,7 +80,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için:
 
 ## 👨‍💻 Geliştirici (Author)
 
-**Furkan Koç**
+**Turgut Efekan Koç**
 - GitHub: [@efekkoc](https://github.com/efekkoc)
 
 ---
